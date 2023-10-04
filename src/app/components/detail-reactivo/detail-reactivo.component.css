@@ -1,0 +1,25 @@
+.detail-reactivo {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.respuestas-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+}
+
+.radio-button-margin {
+  margin: 0 10px;
+}
+
+.radio-group {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+button {
+  z-index: 0;
+  margin: 5px;
+}

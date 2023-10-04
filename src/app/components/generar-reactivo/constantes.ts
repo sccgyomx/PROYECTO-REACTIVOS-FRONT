@@ -1,0 +1,1 @@
+export const Message = "Me puedes generar un reactivo de 3 opciones, $remplazar, quiero que me devuelbas un json con el reactivo (textoPregunta), que las opciones vengan en un arrelo de json (opciones) con texto de la respuesta (textoOpcion) y un bool de si es la corecta o no (esCorrecta), solo dame el json nada mas"

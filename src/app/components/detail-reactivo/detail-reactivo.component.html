@@ -1,0 +1,39 @@
+<mat-card class="detail-reactivo" color="primary">
+  <mat-card-header>
+    <mat-card-title>{{ reactivo._id }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>{{ reactivo.textoPregunta }}</p>
+
+    <section class="respuestas-section">
+      <label class="example-margin">Respuestas:</label>
+      <mat-radio-group
+        *ngIf="opciones != undefined"
+        class="radio-group"
+        color="primary"
+      >
+        <mat-radio-button
+          *ngFor="let respuesta of opciones"
+          class="radio-button-margin"
+          value="{{ respuesta.textoOpcion }}"
+          checked="{{ respuesta.esCorrecta }}"
+        >
+          {{ respuesta.textoOpcion }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </section>
+    <p>Estado de aprobación: {{ reactivo.estadoAprobacion }}</p>
+    <p>Fecha: {{ reactivo.fechaRevision }}</p>
+    <p>Comentarios</p>
+    <p>{{ reactivo.comentarios }}</p>
+  </mat-card-content>
+  <mat-card-actions *ngIf="soloMostrar == undefined" align="end">
+    <button mat-raised-button color="primary">Aceptar</button>
+    <button mat-raised-button color="warn">Rechazar</button>
+  </mat-card-actions>
+  <mat-card-actions *ngIf="soloMostrar" align="end">
+    <button mat-raised-button color="primary" (click)="clickCerrar()">
+      Cerrar
+    </button>
+  </mat-card-actions>
+</mat-card>
